@@ -25,13 +25,7 @@ API_HASH = environ["API_HASH"]
 SESSION_NAME = environ["SESSION_NAME"]
 
 PLUGINS = dict(
-    root="plugins",
-    include=[
-        "vc." + environ["PLUGIN"],
-        "ping",
-        "sysinfo",
-        "stream"
-    ]
+    root="plugins"
 )
 
 app = Client(SESSION_NAME, API_ID, API_HASH, plugins=PLUGINS)
